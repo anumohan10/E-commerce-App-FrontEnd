@@ -1,0 +1,164 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+<div class="jumbotron">
+      <!--Search Bar-->
+      <span class="text-white">
+      <p class="lead justify-content-center" style="font-size: 50px;" >Discover the best food from Us</p></span>
+    <form class="form-inline justify-content-center" method = "GET" action = "{% url 'search' %}" >
+        <input class="form-control mr-sm-2" size="85" name="query"  type="text" placeholder="Search for food, cuisine .... ">
+        <button class="btn btn-outline-light  my-2 my-sm-0" type="submit">Find Food</button>
+        <div class="dropdown">
+  <button class="btn btn-light dropdown-toggle" style='margin-left:16px'type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Food Id</a>
+    <a class="dropdown-item" href="#">Food Name</a>
+    <a class="dropdown-item" href="#">price range between 100 to 150</a>
+    <a class="dropdown-item" href="#">price range between 150 to 200</a>
+    <a class="dropdown-item" href="#">price range between 200 to 300</a>
+    <a class="dropdown-item" href="#">rating</a>
+  </div>
+</div>
+    </form>
+</div>
+<div class="card-group">
+  <div class="card card-primary text-center">
+    <img class="card-img-top" src="../../assets/img2.jpg">
+    <div class="card-body">
+      <div class="badge badge-primary badge-sm">For Ordering</div>
+      <div class="card-title">Order Food Online</div>
+      <p class="card-text">We provide seamless food delivery service to fulfill your cravings. </p>
+    </div>
+    <div class="card-footer">
+      <a class="btn btn-outline-secondary btn-icon-right" (click)="btnOrder()">
+        <span> View Order History 
+          <img src="https://static3.avast.com/1/web/i/v2/components/arrow-m-right-orange.png" height="24">
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="card card-primary text-center">
+    <img class="card-img-top" src="../../assets/img6.jpg" >
+    <div class="card-body">
+      <div class="badge badge-primary badge-sm">For Offers</div>
+      <div class="card-title">Available Offers</div>
+      <p class="card-text">Check the latest offers present for your favourite dishes.</p>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="btn btn-outline-secondary btn-icon-right">
+        <span>Offers
+          <img src="https://static3.avast.com/1/web/i/v2/components/arrow-m-right-orange.png" height="24">
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="card card-primary text-center">
+    <img class="card-img-top" src="../../assets/img4.jpg" alt="Card image cap">
+    <div class="card-body">
+      <div class="badge badge-primary badge-sm">Calorie Checker</div>
+      <div class="card-title">Calorie Checker for a Healthier Craving</div>
+      <p class="card-text">We provide you with the healthiest options available in our menu</p>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="btn btn-outline-secondary btn-icon-right">
+        <span> Healthy Cravings
+          <img src="https://static3.avast.com/1/web/i/v2/components/arrow-m-right-orange.png" height="24">
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+<div id ="custprofile" *ngIf="display"></div>
+<div class="awards-container">
+  <div class="card-deck">
+    <div class="card card-awards text-center">
+      <div class="button">
+        <button type="button" class="btn btn-light" (click)="btnClick()" aria-label="Left Align">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>          
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="card-title">View Customer Profile</div>
+      </div>
+    </div>
+    <div class="card card-awards text-center">
+      <div class="button">
+        <button type="button" class="btn btn-light" (click)="btnWallet()"aria-label="Left Align">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wallet-fill" viewBox="0 0 16 16">
+            <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z"/>
+            <path d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z"/>
+          </svg>          </button>
+        
+      </div>
+      <div class="card-body">
+        <div class="card-title"> Cravings Wallet</div>
+      </div>
+    </div>
+    <div class="card card-awards text-center">
+      <div class="button">
+        <button type="button" class="btn btn-light" (click)="btnReviews()" aria-label="Left Align">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+            <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+          </svg>          </button>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Add Reviews</div>
+      </div>
+    </div>
+    <div class="card card-awards text-center">
+      <div class="button">
+        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter" aria-label="Left Align">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+          </svg>          </button>
+                </div>
+      <div class="card-body">
+        <div class="card-title">Feedback</div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Feedback</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <div class="center-block">
+                      <div class = "col align-self-center">
+                <label for="formGroupExampleInput2">Enter your Customer Id</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your Customer Id">
+                <label for="formGroupExampleInput2">Enter your Feedback</label>
+                <textarea class="form-control" placeholder="Leave your Feedback here" id="floatingTextarea"></textarea>
+                </div>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<app-menu></app-menu>

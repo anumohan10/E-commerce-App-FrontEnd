@@ -1,0 +1,446 @@
+body {
+    margin:0%;
+    background-image: url("../../assets/aboutbackground.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.nav{
+    text-align: right;
+}
+.nav li {
+    list-style: none;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: large;
+    color: #5e5c5c;
+    display: inline-block;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+li:hover{
+    color: blue;
+}
+
+.Content{
+    
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+}
+
+.footer{
+    left: 0;
+    bottom: 0;
+    margin-top: 90%;
+    height: 100px;
+    margin-bottom: 0%;
+    
+    color: white;
+    text-align: center;
+    display: grid;
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+}
+.footer h2{
+    font-family:'Courgette', cursive;
+    text-align: center;
+}
+footer li{
+    margin-top: 20px;
+    list-style: none;
+    display: inline-block;
+    padding-right: 20px;
+    margin-right: 20px
+}
+footer li img{
+    width: 50px;
+}
+footer ul{
+    text-align: right;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: rgb(242, 198, 77);
+}
+
+
+.box {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.imgbox {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 2;
+    background: #000;
+}
+
+.imgbox:hover {
+    transform: translateY(-100px);
+}
+
+.imgbox img {
+    transition: 0.5s;
+}
+
+.box:hover .imgbox img {
+    opacity: 0.6;
+}
+
+.social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.social li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateY(200px);
+    opacity: 0;
+}
+
+.box:hover .social li a {
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.box .social li a .fa {
+    transition: 0.8s;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.box .social li a:hover .fa {
+    transform: rotateY(360deg)
+}
+
+.box:hover .social li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.box:hover .social li:nth-child(2) a {
+    transition-delay: 0.4s;
+}
+
+.box:hover .social li:nth-child(3) a {
+    transition-delay: 0.6s;
+}
+
+.box:hover .social li:nth-child(4) a {
+    transition-delay: 0.8s;
+}
+
+/* -------------For second box---------------- */
+
+.box2 {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.social2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.social2 li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+.box2:hover .social2 li a {
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.box2 .social2 li a .fa {
+    transition: 0.8s;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.box2 .social2 li a:hover .fa {
+    transform: rotateY(360deg)
+}
+
+.box2:hover .social2 li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.box2:hover .social2 li:nth-child(2) a {
+    transition-delay: 0.4s;
+}
+
+.box2:hover .social2 li:nth-child(3) a {
+    transition-delay: 0.6s;
+}
+
+.box2:hover .social2 li:nth-child(4) a {
+    transition-delay: 0.8s;
+}
+/* -----box 3---------*/
+.box3 {
+    position: absolute;
+    top: 180%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.social3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.social3 li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+.box3:hover .social3 li a {
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.box3 .social3 li a .fa {
+    transition: 0.8s;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.box3 .social3 li a:hover .fa {
+    transform: rotateY(360deg)
+}
+
+.box3:hover .social3 li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.box3:hover .social3 li:nth-child(2) a {
+    transition-delay: 0.4s;
+}
+
+.box3:hover .social3 li:nth-child(3) a {
+    transition-delay: 0.6s;
+}
+
+.box3:hover .social3 li:nth-child(4) a {
+    transition-delay: 0.8s;
+}
+/* box 4 */
+.box4 {
+    position: absolute;
+    top: 180%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+}
+
+.social4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.social4 li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+.box4:hover .social4 li a {
+    transform: translate(0px);
+    opacity: 1;
+}
+
+.box4 .social4 li a .fa {
+    transition: 0.8s;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.box4 .social4 li a:hover .fa {
+    transform: rotateY(360deg)
+}
+
+.box4:hover .social4 li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.box4:hover .social4 li:nth-child(2) a {
+    transition-delay: 0.4s;
+}
+
+.box4:hover .social4 li:nth-child(3) a {
+    transition-delay: 0.6s;
+}
+
+.box4:hover .social4 li:nth-child(4) a {
+    transition-delay: 0.8s;
+}
+
+/*box 4 end*/
+
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 4;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.details h2 {
+    margin: 10px 00;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.details h2 span {
+    color: rgb(112, 107, 107);
+    font-size: 16px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.typewriter{
+    font-size: medium;
+    font-family: ;
+    text-align: center;
+}
+  .typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 7s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }

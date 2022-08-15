@@ -1,0 +1,94 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container ">
+      <h1 class="display-4">Cravings Wallet</h1>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+  <div class = "content">
+<div class="card text-white text-center">
+  <div class="card-header">
+    Your Wallet Details 
+  </div>
+  <div class="card-body text-center text-dark bg-light">
+    <p class="card-text">Wallet Id:{{wallet.walletId}}</p>
+        <p class="card-text">Customer Id:{{wallet.custId}}</p>
+            <p class="card-text">Bank Account Number:{{wallet.bankaccno}}</p>
+                <p class="card-text">Balance:{{wallet.balance}}</p>
+    <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content text-dark">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="center-block">
+                    <div class = "col align-self-center">
+              <label for="formGroupExampleInput2">New Bank Account Number</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your Bank Account Number">
+              </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+      </div>
+          </div>
+    </div>
+          <div class="col-sm-6">
+            <div class="col d-flex justify-content-center">
+
+                <div class="card" style="width: 55rem;">
+                  <div class="card-header text-white text-center border-info ">
+                    Add Money 
+                  </div>
+                  <div class="card-body text-center text-dark bg-light">
+                    <p class="card-text">Current Balance:{{wallet.balance}}</p>
+                      <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter1">Add Money</a>
+          <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content text-dark">
+                  <div class="modal-header">
+                    <h5 class="modal-title"  id="exampleModalLongTitle">Add Money</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <div class="center-block">
+                          <div class = "col align-self-center">
+                    <label for="formGroupExampleInput2">Balance to be added</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your amount to be added">
+                    </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            </div>
+                </div>
+                  </div>
+          </div>
+  </div>

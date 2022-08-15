@@ -1,0 +1,46 @@
+<h1>Your Orders</h1>
+<div class="background">
+<h2>Track your orders</h2>
+
+
+<!--Table-->
+<br>
+<br>
+<br>
+<br>
+
+<div class = "bg">
+
+  <div class="wrapper">
+    <div *ngFor='let Orderstatus of orderstatuss'>
+     
+      <div><div class="box a">
+        <div class="card">
+          <div>
+        <h5>Token ID:  {{Orderstatus.id}}</h5>
+        <h5>Order Id:  {{Orderstatus.orderId}}</h5>
+        <h5>ETA:  {{Orderstatus.eta}}</h5>
+      </div>
+      <div>
+        <h5>Order Status:  {{Orderstatus.orderstatus}}</h5>
+          <h5>Vendor ID:  {{Orderstatus.quantity}} </h5> 
+        </div>
+          </div>
+        </div>
+     
+        
+      </div>
+            
+    </div>
+      
+    </div>
+    <div *ngIf="!orderstatuss || orderstatuss.length==0" class="empty">
+      <div colspan="5">
+        No Orderstatus items to display
+      </div>
+
+
+</div>
+<br>
+  <app-orderlog></app-orderlog>
+  </div>

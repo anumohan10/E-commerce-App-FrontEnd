@@ -1,0 +1,38 @@
+<h2>Order History</h2>
+
+
+<!--Table-->
+<br>
+
+<br>
+<br>
+<br>
+
+<div class = "bg">
+
+  <div class="wrapper">
+    <div *ngFor='let Orderlog of orderlogs'>
+     
+      <div><div class="box a">
+        <div class="card">
+          <img src="../../assets/{{Orderlog.itemId}}.jpg" style="width:50%">
+          <div>
+          <h5>Order ID:  {{Orderlog.orderId}}</h5>
+        <h5>item Name:  {{Orderlog.itemName}}</h5>
+          <h5>Vendor Id:  {{Orderlog.vendorId}}</h5>
+          <h5>Total cost:  {{Orderlog.totalCost}} </h5> 
+          <h5>Time stamp:  {{Orderlog.orderDate}} </h5> 
+        </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <div *ngIf="!orderlogs || orderlogs.length==0" class="empty">
+    <div colspan="5">
+      No Orderstatus items to display
+    </div>
+</div>
+
+<br>
+<app-footer class="footer"></app-footer>
